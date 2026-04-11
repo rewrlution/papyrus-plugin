@@ -59,6 +59,8 @@ Work through these 5 anchors in order. Each one is a single opening question. Fo
 
 **Session length target:** 5–8 total turns. Should feel like 2–3 minutes.
 
+**Displaying long answers:** When the user gives a long answer (multiple sentences or clauses), echo back a condensed version broken into separate lines — one thought per line, split at periods or natural breaks. This makes it easy for them to confirm you understood correctly before moving on. Do not echo short answers.
+
 ---
 
 ### Anchor 1: Work
@@ -178,23 +180,24 @@ Synthesize the conversation into a structured markdown entry. Do NOT paste a tra
 - The tone should be direct and specific, not polished or formal
 - Use the user's exact words when they're concrete (e.g., "Redis DEL call", "auth bug", "API redesign")
 
-**Format:**
+**Section headings are not fixed — choose headings that reflect what actually happened.**
+
+The five anchors are a conversation guide, not a mandatory set of output sections. After the conversation, look at what was actually discussed and write sections that fit the content. Use the anchor defaults as a starting point, but rename or merge freely.
+
+Examples:
+- If anchor 5 was just a 1:1 with a manager, use `## 1:1 with [name]` or `## Manager sync`, not `## Cross-team / collaboration`
+- If anchor 2 and 4 were both about the same incident, merge them: `## Owning the outage response`
+- If nothing came up for an anchor, omit the section entirely — do not write it with empty content
+- If two anchors produced thin answers that belong together, combine them under one heading that captures the actual content
+
+Default headings to use when the content is genuinely general:
 
 ```
 ## What I worked on
-[1–4 sentences]
-
 ## What I owned
-[1–4 sentences — omit if nothing]
-
 ## Who I helped
-[1–4 sentences — omit if nothing]
-
 ## Decisions made
-[1–4 sentences — omit if nothing]
-
 ## Cross-team / collaboration
-[1–4 sentences — omit if nothing]
 ```
 
 Then save it:
