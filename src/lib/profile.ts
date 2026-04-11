@@ -94,7 +94,7 @@ export function profileExists(profilePath: string = PATHS.profilePath): boolean 
 //   npx tsx src/lib/profile.ts exists
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {
-  const [, , command] = process.argv;
+  const [, , command, ...args] = process.argv;
 
   switch (command) {
     case 'read': {
@@ -108,8 +108,22 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
       process.stdout.write(JSON.stringify({ exists: profileExists() }) + '\n');
       break;
 
+    case 'write': {
+      const raw = args[0];
+      if (!raw) { process.stderr.write('Usage: profile.ts write \'{"level":"senior",...}\'\n'); process.exit(1); }
+      let input: ProfileInput;
+      try {
+        input = JSON.parse(raw) as ProfileInput;
+      } catch {
+        process.stderr.write('Invalid JSON input\n'); process.exit(1);
+      }
+      writeProfile(input!);
+      process.stdout.write(JSON.stringify({ ok: true }) + '\n');
+      break;
+    }
+
     default:
-      process.stderr.write('Usage: profile.ts read | exists\n');
+      process.stderr.write('Usage: profile.ts read | exists | write <json>\n');
       process.exit(1);
   }
 }
