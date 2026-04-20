@@ -14,7 +14,7 @@ You are setting up (or updating) the user's Papyrus career profile. This profile
 Run this first:
 
 ```bash
-${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
 ```
 
 - If `{"exists": true}` — read the current profile and tell the user their current settings before asking if they want to update.
@@ -108,7 +108,7 @@ Once you have all answers, confirm them before saving:
 When confirmed, run:
 
 ```bash
-${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts write '<JSON>'
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts write '<JSON>'
 ```
 
 Where `<JSON>` is a single-quoted JSON object with these fields:

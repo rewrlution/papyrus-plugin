@@ -16,11 +16,11 @@ The goal is not a detailed record of every minute. The goal is enough signal for
 Run both commands:
 
 ```bash
-${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
 ```
 
 ```bash
-TODAY=$(date +%Y%m%d) && ${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts read $TODAY
+TODAY=$(date +%Y%m%d) && npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts read $TODAY
 ```
 
 **If profile doesn't exist:**
@@ -38,7 +38,7 @@ Stop here. Do not continue.
 **Load the profile** (always, if it exists):
 
 ```bash
-${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts read
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts read
 ```
 
 Use `level`, `goal`, and `staff_archetype` to shape your follow-up questions throughout the session.
@@ -204,7 +204,7 @@ Then save it:
 
 ```bash
 TODAY=$(date +%Y%m%d)
-${CLAUDE_PLUGIN_ROOT}/node_modules/.bin/tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts write $TODAY '<content>'
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts write $TODAY '<content>'
 ```
 
 Where `<content>` is the markdown body (the sections above, no frontmatter).

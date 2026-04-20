@@ -153,8 +153,15 @@ if (process.argv[1] === new URL(import.meta.url).pathname) {
       case 'range':
         return readJournalsInRange(args[0] ?? '', args[1] ?? '');
 
+      case 'write': {
+        const [date, content] = args;
+        if (!date || !content) { process.stderr.write('Usage: journal.ts write <YYYYMMDD> <content>\n'); process.exit(1); }
+        writeJournal(date, content);
+        return { ok: true };
+      }
+
       default:
-        process.stderr.write('Usage: journal.ts list | read <YYYYMMDD> | range <from> <to>\n');
+        process.stderr.write('Usage: journal.ts list | read <YYYYMMDD> | write <YYYYMMDD> <content> | range <from> <to>\n');
         process.exit(1);
     }
   })();
