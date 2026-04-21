@@ -14,11 +14,11 @@ You are setting up (or updating) the user's Papyrus career profile. This profile
 Run both in parallel:
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/version.js
 ```
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js exists
 ```
 
 Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
@@ -114,7 +114,7 @@ Once you have all answers, confirm them before saving:
 When confirmed, run:
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts write '<JSON>'
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js write '<JSON>'
 ```
 
 Where `<JSON>` is a single-quoted JSON object with these fields:

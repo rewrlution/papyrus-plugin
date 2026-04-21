@@ -16,15 +16,15 @@ The goal is not a detailed record of every minute. The goal is enough signal for
 Run all three commands in parallel:
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/version.js
 ```
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js exists
 ```
 
 ```bash
-TODAY=$(date +%Y%m%d) && npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts read $TODAY
+TODAY=$(date +%Y%m%d) && node ${CLAUDE_PLUGIN_ROOT}/dist/lib/journal.js read $TODAY
 ```
 
 Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
@@ -44,7 +44,7 @@ Stop here. Do not continue.
 **Load the profile** (always, if it exists):
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts read
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js read
 ```
 
 Use `level`, `goal`, and `staff_archetype` to shape your follow-up questions throughout the session.
@@ -210,7 +210,7 @@ Then save it:
 
 ```bash
 TODAY=$(date +%Y%m%d)
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts write $TODAY '<content>'
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/journal.js write $TODAY '<content>'
 ```
 
 Where `<content>` is the markdown body (the sections above, no frontmatter).

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
+    "postinstall": "npm run build",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",

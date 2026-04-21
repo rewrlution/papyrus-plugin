@@ -14,15 +14,15 @@ Generate standup bullets from the user's journal. This should feel instant — o
 Run all three in parallel:
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/version.js
 ```
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js exists
 ```
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts list
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/journal.js list
 ```
 
 Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
@@ -35,7 +35,7 @@ Stop here.
 The list returns entries sorted newest first. Take the most recent one and read it:
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts read <date>
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/journal.js read <date>
 ```
 
 If the most recent entry is from yesterday — use it silently.
@@ -52,7 +52,7 @@ Stop here.
 ## Step 2: Read the profile
 
 ```bash
-npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts read
+node ${CLAUDE_PLUGIN_ROOT}/dist/lib/profile.js read
 ```
 
 Use `level` and `domain` to calibrate bullet depth and technical language. Do not change the output structure based on level — just the depth of each bullet.
