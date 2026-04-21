@@ -1,0 +1,11 @@
+{
+  "name": "Papyrus",
+  "description": "AI-powered career coaching from your developer journals",
+  "plugins": [
+    {
+      "name": "papyrus",
+      "description": "AI-powered career coaching from your developer journals",
+      "path": "."
+    }
+  ]
+}
