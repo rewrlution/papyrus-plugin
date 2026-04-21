@@ -13,7 +13,11 @@ The goal is not a detailed record of every minute. The goal is enough signal for
 
 ## Step 1: Read profile and check today's entry
 
-Run both commands:
+Run all three commands in parallel:
+
+```bash
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+```
 
 ```bash
 npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
@@ -22,6 +26,8 @@ npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
 ```bash
 TODAY=$(date +%Y%m%d) && npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts read $TODAY
 ```
+
+Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
 
 **If profile doesn't exist:**
 > "It looks like you haven't run /papyrus-setup yet. The journal skill works best when it knows your career stage. Run /papyrus-setup first (takes 2 minutes), then come back here."

@@ -11,11 +11,17 @@ You are setting up (or updating) the user's Papyrus career profile. This profile
 
 ## Step 1: Check for an existing profile
 
-Run this first:
+Run both in parallel:
+
+```bash
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+```
 
 ```bash
 npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
 ```
+
+Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
 
 - If `{"exists": true}` — read the current profile and tell the user their current settings before asking if they want to update.
 - If `{"exists": false}` — greet them and explain what you're about to do:

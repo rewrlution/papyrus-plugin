@@ -11,7 +11,11 @@ Generate standup bullets from the user's journal. This should feel instant — o
 
 ## Step 1: Check profile and find the right journal entry
 
-Run both in parallel:
+Run all three in parallel:
+
+```bash
+npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/version.ts
+```
 
 ```bash
 npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
@@ -20,6 +24,8 @@ npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/profile.ts exists
 ```bash
 npx tsx ${CLAUDE_PLUGIN_ROOT}/src/lib/journal.ts list
 ```
+
+Print the version output as-is (e.g. `Papyrus v0.1.0`) before proceeding.
 
 **If profile doesn't exist:**
 > "Run /papyrus-setup first — standup needs your career profile to generate useful output."
