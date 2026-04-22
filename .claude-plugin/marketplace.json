@@ -1,0 +1,16 @@
+{
+  "name": "papyrus-plugin",
+  "description": "AI-powered career coaching from your developer journals",
+  "owner": {
+    "name": "rewrlution"
+  },
+  "plugins": [
+    {
+      "name": "papyrus",
+      "description": "AI-powered career coaching from your developer journals",
+      "category": "productivity",
+      "source": ".",
+      "homepage": "https://github.com/rewrlution/papyrus-plugin"
+    }
+  ]
+}
