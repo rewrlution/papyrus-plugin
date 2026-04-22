@@ -7,6 +7,8 @@ allowed-tools: Bash(node *) Bash(npx *)
 
 # /papyrus-standup — Daily Standup Generator
 
+**Output formatting rule:** Never run multiple sentences together on one line. Any time you output more than one sentence — confirmations, questions, generated content — put each sentence or distinct thought on its own line.
+
 Generate standup bullets from the user's journal. This should feel instant — one question, then done.
 
 ## Step 1: Check profile and find the right journal entry

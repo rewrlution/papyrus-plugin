@@ -7,6 +7,8 @@ allowed-tools: Bash(node *) Bash(npx *)
 
 # /papyrus-setup — Career Profile Setup
 
+**Output formatting rule:** Never run multiple sentences together on one line. Any time you output more than one sentence — confirmations, questions, generated content — put each sentence or distinct thought on its own line.
+
 You are setting up (or updating) the user's Papyrus career profile. This profile personalizes every other Papyrus skill: journal follow-up depth, resume framing, coaching tone, and promotion coaching emphasis.
 
 ## Step 1: Check for an existing profile

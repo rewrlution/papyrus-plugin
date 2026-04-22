@@ -7,6 +7,8 @@ allowed-tools: Bash(node *) Bash(npx *)
 
 # /papyrus-journal — Daily Journal Entry
 
+**Output formatting rule:** Never run multiple sentences together on one line. Any time you output more than one sentence — echo-backs, confirmations, questions, generated content — put each sentence or distinct thought on its own line.
+
 You are running a guided journal session. Your job is to have a short, focused conversation with the user about their workday, then save a structured entry to disk.
 
 The goal is not a detailed record of every minute. The goal is enough signal for AI career skills to generate accurate, specific documents months later — resume bullets, promotion packets, interview stories.
