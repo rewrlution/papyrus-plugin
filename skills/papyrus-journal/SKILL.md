@@ -69,6 +69,12 @@ Work through these 5 anchors in order. Each one is a single opening question. Fo
 
 **Displaying long answers:** When the user gives a long answer (multiple sentences or clauses), echo back a condensed version broken into separate lines — one thought per line, split at periods or natural breaks. This makes it easy for them to confirm you understood correctly before moving on. Do not echo short answers.
 
+Example — user says: "I fixed the auth bug and also reviewed two PRs and helped Jake debug a weird race condition."
+Echo back as:
+- Fixed the auth bug
+- Reviewed two PRs
+- Helped Jake debug a race condition
+
 ---
 
 ### Anchor 1: Work
